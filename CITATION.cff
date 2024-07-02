@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use the script or any of the figures from this repository, please cite it as below."
+authors:
+- family-names: Illimar
+  given-names: Rekand
+orcid: https://doi.org/10.5281/zenodo.12620698
+title:kjemist/TotalDeaths20thCentury: Minimum Working Example
+version: v0.1
+date-released: 2024-07-02
