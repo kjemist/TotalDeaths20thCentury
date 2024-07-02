@@ -7,4 +7,6 @@ This repositoy contains data which describes the total death numbers in the 20th
 
 # License and reusability
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12620698.svg)](https://doi.org/10.5281/zenodo.12620698)
+
 The R-script and the figures in this repository are licensed under an open Creative Commons license. You are free to reuse and share the material in this repository under this license, but you **must credit the CDC for obtaining the original data**. It would also be nice if you can acknowledge me as the author of this visualization :)
