@@ -18,7 +18,8 @@ TotalDeaths$NonInfection...Death.Rates <- TotalDeaths$Total.deaths...Death.Rates
 TotalDeaths[TotalDeaths <= 0] <- NA #reset NA-values so that plot does not misbehave
 
 
-pal <- palette(brewer.pal(n = 3, name = "Set2"))
+pal <- palette(brewer.pal(n = 3, name = "Spectral"))
+display.brewer.all(n=10, exact.n=FALSE)
 
 
 #subset only relevant cols
@@ -34,11 +35,12 @@ TotalDeaths.long <- melt(TotalDeaths.subset,
                            variable.name = "Death Rate variable") 
 
 ggplot(TotalDeaths.long, aes(x = Year, y = `Death Rates pr. 100.000 [United States]`, color = `Death Rate variable`, group = `Death Rate variable`)) +
-  geom_line(data=TotalDeaths.long[!is.na(TotalDeaths.long$`Death Rates pr. 100.000 [United States]`),]) + #here only a subset of years who has actually reported death numbers. 1946 is missing.
+  geom_line(data=TotalDeaths.long[!is.na(TotalDeaths.long$`Death Rates pr. 100.000 [United States]`),], aes(linetype = `Death Rate variable`)) + #here only a subset of years who has actually reported death numbers. 1946 is missing.
   theme_classic() +
   theme(legend.position = "bottom") +
+  ggtitle("Causes of Death in the 19th Century\n[United States, Data from the Center of Disease Control]") +
   scale_color_manual(values=pal)
   
 
-# > setwd("./07-VariousProjects/TotalDeaths20thCentury/")
-ggsave("./pngs/total_deaths.png", width = 2000, height = 1000, units = "px")
+setwd("./07-VariousProjects/TotalDeaths20thCentury/")
+ggsave("./pngs/total_deaths_Spectral_linetype.png", width = 2000, height = 1000, units = "px")
