@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use these resources, please cite it as below."
+authors:
+- family-names: "Rekand"
+  given-names: "Illimar"
+  orcid: "https://orcid.org/0000-0002-0457-8024"
+title: "TotalDeaths20thCentury"
+version: 0.1.0
+doi: https://doi.org/10.5281/zenodo.12620698
+date-released: 2024-11-20
+url: "https://github.com/kjemist/TotalDeaths20thCentury"
